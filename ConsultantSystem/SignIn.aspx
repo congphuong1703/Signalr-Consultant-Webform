@@ -10,96 +10,53 @@
     <title>Đăng nhập</title>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class="container">
-            <br>
-            <p class="text-center">More bootstrap 4 components on <a href="http://bootstrap-ecommerce.com/">Bootstrap-ecommerce.com</a></p>
-            <hr>
-            <div class="card bg-light">
-                <article class="card-body mx-auto" style="max-width: 400px;">
-                    <h4 class="card-title mt-3 text-center">Tạo tài khoản</h4>
+    <form id="form1" runat="server" method="post">
+        <div class="container h-custom">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-6 my-lg-5 py-lg-5">
+                    <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.png" class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-5 offset-xl-1 my-lg-5 py-lg-5">
                     <form>
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                            <p class="text-center lead fw-normal mb-0 me-3">Đăng Nhập</p>
+                        </div>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4 mt-3">
+                            <asp:TextBox type="text" ID="username" runat="server" class="form-control form-control-lg" placeholder="Nhập tài khoản" />
+                            <label class="form-label" for="form3Example3" style="margin-left: 0px;">Tài khoản</label>
+                            <div class="form-notch">
+                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                <div class="form-notch-middle" style="width: 88.8px;"></div>
+                                <div class="form-notch-trailing"></div>
                             </div>
-                            <input name="" class="form-control" placeholder="Full name" type="text">
                         </div>
-                        <!-- form-group// -->
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-3">
+                            <asp:TextBox type="password" ID="password" runat="server" class="form-control form-control-lg" placeholder="Nhập mật khẩu" />
+                            <label class="form-label" for="form3Example4" style="margin-left: 0px;">Mật khẩu</label>
+                            <div class="form-notch">
+                                <div class="form-notch-leading" style="width: 9px;"></div>
+                                <div class="form-notch-middle" style="width: 64px;"></div>
+                                <div class="form-notch-trailing"></div>
                             </div>
-                            <input name="" class="form-control" placeholder="Email address" type="email">
                         </div>
-                        <!-- form-group// -->
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-phone"></i></span>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- Checkbox -->
+                            <div class="form-check mb-0">
                             </div>
-                            <input name="" class="form-control" placeholder="Phone number" type="text">
+                            <a href="ForgotPassword.aspx" class="text-body">Quên mật khẩu?</a>
                         </div>
-                        <!-- form-group// -->
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-building"></i></span>
-                            </div>
-                            <select class="form-control">
-                                <option selected="">Select job type</option>
-                                <option>Designer</option>
-                                <option>Manager</option>
-                                <option>Accaunting</option>
-                            </select>
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <asp:Button class="btn btn-primary btn-lg" runat="server" OnClick="Login_Click" ID="loginBtn" Style="padding-left: 2.5rem; padding-right: 2.5rem;" Text="Đăng nhập" />
+                            <p class="small fw-bold mt-2 pt-1 mb-0">Bạn chưa có tài khoản? <a href="SignUp.aspx" class="link-danger">Đăng ký</a></p>
                         </div>
-                        <!-- form-group end.// -->
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                            </div>
-                            <input class="form-control" placeholder="Create password" type="password">
-                        </div>
-                        <!-- form-group// -->
-                        <div class="form-group input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                            </div>
-                            <input class="form-control" placeholder="Repeat password" type="password">
-                        </div>
-                        <!-- form-group// -->
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block">Create Account  </button>
-                        </div>
-                        <!-- form-group// -->
-                        <p class="text-center">Have an account? <a href="">Log In</a> </p>
                     </form>
-                </article>
+                </div>
             </div>
-            <!-- card.// -->
-
         </div>
-        <!--container end.//-->
-
-        <br>
-        <br>
-        <article class="bg-secondary mb-3">
-            <div class="card-body text-center">
-                <h3 class="text-white mt-3">Bootstrap 4 UI KIT</h3>
-                <p class="h5 text-white">
-                    Components and templates 
-                    <br>
-                    for Ecommerce, marketplace, booking websites 
-and product landing pages
-                </p>
-                <br>
-                <p>
-                    <a class="btn btn-warning" target="_blank" href="http://bootstrap-ecommerce.com/">Bootstrap-ecommerce.com  
-
-                        <i class="fa fa-window-restore "></i></a>
-                </p>
-            </div>
-            <br>
-            <br>
-        </article>
     </form>
 </body>
 </html>
