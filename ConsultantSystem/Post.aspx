@@ -39,7 +39,7 @@
                                 <div class="invalid-feedback">Mô tả không được để trống!</div>
                             </div>
                             <div class="col-md-12 mt-3">
-                                <asp:FileUpload runat="server" type="file" class="form-control-file" ID="images" />
+                                <asp:FileUpload runat="server" type="file" accept=".jpg,.png,.jpeg" class="form-control-file" ID="images" />
                                 <div class="valid-feedback">Hình ảnh</div>
                                 <div class="invalid-feedback">Hình ảnh không được để trống!</div>
                             </div>

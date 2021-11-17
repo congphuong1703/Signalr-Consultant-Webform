@@ -15,15 +15,6 @@ namespace ConsultantSystem
     {
 
         /// <summary>
-        /// searchBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton searchBtn;
-
-        /// <summary>
         /// RepeaterUsersMessage control.
         /// </summary>
         /// <remarks>
@@ -33,30 +24,21 @@ namespace ConsultantSystem
         protected global::System.Web.UI.WebControls.Repeater RepeaterUsersMessage;
 
         /// <summary>
-        /// receiveID control.
+        /// username control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label receiveID;
+        protected global::System.Web.UI.WebControls.Label username;
 
         /// <summary>
-        /// Repeater1 control.
+        /// RepeaterMessageHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater Repeater1;
-
-        /// <summary>
-        /// sendMessageBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton sendMessageBtn;
+        protected global::System.Web.UI.WebControls.Repeater RepeaterMessageHistory;
     }
 }

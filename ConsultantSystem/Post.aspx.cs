@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,7 +13,11 @@ namespace ConsultantSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            UserModel userSession = (UserModel)Session["user"];
+            if (userSession == null)
+            {
+                Response.Redirect("SignIn.aspx");
+            }
         }
 
         protected void Post_Click(object sender, EventArgs e)
@@ -41,15 +46,16 @@ namespace ConsultantSystem
                     }
                     Dictionary<string, object> map = new Dictionary<string, object> { };
                     map.Add("@pName", name.Text);
-                    map.Add("@pDescription", name.Text);
+                    map.Add("@pDescription", description.Value);
                     map.Add("@pImages", image);
                     map.Add("@pPrice", price.Text);
                     map.Add("@pAddress", address.Text);
                     map.Add("@pContact", contact.Text);
                     map.Add("@pUserPost", userSession.ID);
-                    DataTable dt = DataProvider.getInstance.ExecuteQuery(postProduct, map);
-                    if (dt.Rows.Count > 0)
+                    MySqlDataReader dr = DataProvider.getInstance.ExecuteQueryReader(postProduct, map);
+                    if (dr.RecordsAffected > 0)
                     {
+                        Response.Redirect("Product.aspx");
                         //thong bao
                     }
                     else

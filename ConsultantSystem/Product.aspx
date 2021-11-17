@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeaderContent" runat="server">
     <link href="Content/Product.css" rel="stylesheet" />
+    <title>Sản phẩm</title>
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <section id="new-arrivals" class="new-arrivals">
@@ -25,7 +26,7 @@
                                         <div class="new-arrival-cart">
                                             <p>
                                                 <span class="lnr lnr-cart"></span>
-                                                <a href="ProductDetails/id=<%#Eval("id")%>">Xem chi tiết</a>
+                                                <a href="ProductDetails?product_id=<%#Eval("id")%>">Xem chi tiết</a>
                                             </p>
                                             <p class="arrival-review pull-right">
                                                 <span class="lnr lnr-heart"></span>

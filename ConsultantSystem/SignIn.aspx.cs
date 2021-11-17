@@ -30,18 +30,18 @@ namespace ConsultantSystem
                 var id = dt.Rows[0][0];
                 var username = dt.Rows[0][1];
                 var role = dt.Rows[0][2];
-                var createdAt = dt.Rows[0][3];
-                Response.Redirect("About.aspx");
+                var createdAt = dt.Rows[0][4];
 
-                UserModel user = new UserModel()
-                {
-                    ID = Int32.Parse(id.ToString()),
-                    Username = username.ToString(),
-                    Role = role.ToString(),
-                    CreatedAt = DateTime.Parse(createdAt.ToString())
-                };
+                UserModel user = new UserModel();
+
+                user.ID = Int32.Parse(id.ToString());
+                user.Username = username.ToString();
+                user.Role = role.ToString();
+                user.CreatedAt = DateTime.Parse(createdAt.ToString());
+
 
                 Session["user"] = user;
+                Response.Redirect("About.aspx");
             }
             else
             {

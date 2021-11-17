@@ -225,5 +225,26 @@ namespace ConsultantSystem
                 }
                 return data;
             }
+
+        public MySqlDataReader ExecuteQueryReader(string storeProcedure, Dictionary<string, Object> map)
+        {
+
+            MySqlDataReader rdr;
+            //tạo kết nối tới database
+            // using khi mà kết thúc khối lệnh thì dữ liệu sẽ tự giải phóng
+            using (MySqlConnection connection = this.connectionSQL())
+            {
+                // chạy câu thực thi câu truy vấn query trên data connection
+                MySqlCommand cmd = new MySqlCommand(storeProcedure, connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach (var key in map.Keys)
+                {
+                    cmd.Parameters.AddWithValue(key, map[key]);
+                }
+                rdr = cmd.ExecuteReader();
+                connection.Close();
+            }
+            return rdr;
         }
+    }
     }

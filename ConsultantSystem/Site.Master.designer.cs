@@ -24,13 +24,22 @@ namespace ConsultantSystem
         protected global::System.Web.UI.WebControls.ContentPlaceHolder HeaderContent;
 
         /// <summary>
+        /// postBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor postBtn;
+
+        /// <summary>
         /// signOutBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink signOutBtn;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor signOutBtn;
 
         /// <summary>
         /// MainContent control.

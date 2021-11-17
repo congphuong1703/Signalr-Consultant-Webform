@@ -26,7 +26,7 @@ namespace ConsultantSystem
 
             map.Add("@pUsername", username.Text);
             map.Add("@pPassword", password.Text);
-            map.Add("@pRole", "customer");
+            map.Add("@pRole", "user");
             map.Add("@pCreated_at", theDate);
             int count = DataProvider.getInstance.ExecuteNonQuery(registerProcedure, map);
             if (count > 0)
@@ -35,7 +35,7 @@ namespace ConsultantSystem
             }
             else
             {
-                Response.Write("<script language='javascript'>alert('Đăng ký thất bại')</script>");
+                Response.Write("<script language='javascript'>alert('Tài khoản đã có người sử dụng.')</script>");
             }
         }
     }

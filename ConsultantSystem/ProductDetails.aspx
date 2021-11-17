@@ -6,11 +6,11 @@
 </asp:Content>
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <section class="mb-5" id="hide-scroll">
-        <asp:Repeater ID="RepeaterProductDetails" runat="server" OnItemDataBound="RepeaterProductsItemDataBound">
+        <asp:Repeater ID="RepeaterProductDetails" runat="server">
             <ItemTemplate>
                 <div class="row">
                     <div class="text-center p-3">
-                        <h2><strong><%#Eval("name") %></strong></h2>
+                        <h2><strong>Tên : <%#Eval("name") %></strong></h2>
                     </div>
                 </div>
                 <div class="row">

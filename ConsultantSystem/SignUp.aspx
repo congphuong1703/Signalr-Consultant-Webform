@@ -4,14 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="lib/jquery/jquery.min.js" rel="stylesheet" />
+    <title>Đăng ký</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div class="container h-custom">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-md-9 col-lg-6 col-xl-6 my-lg-5 py-lg-5">
-                    <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.png" class="img-fluid" alt="Sample image" />
+                    <a href="About.aspx">
+                        <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/draw2.png" class="img-fluid" alt="Sample image" />
+                    </a>
                 </div>
                 <div class="col-md-8 col-lg-6 col-xl-5 offset-xl-1 my-lg-5 py-lg-5">
                     <form>

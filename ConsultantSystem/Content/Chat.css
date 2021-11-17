@@ -246,3 +246,6 @@
         overflow-x: auto
     }
 }
+a{
+    text-decoration:none;
+}

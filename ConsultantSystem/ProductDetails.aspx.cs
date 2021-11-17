@@ -12,11 +12,18 @@ namespace ConsultantSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string getAllProduct = "getAllProduct";
-            Dictionary<string, object> map = new Dictionary<string, object>();
-            DataTable dt = DataProvider.getInstance.ExecuteQuery(getAllProduct, map);
-            RepeaterProductDetails.DataSource = dt;
-            RepeaterProductDetails.DataBind();
+            string parameter = Request.QueryString["product_id"];
+            if (!String.IsNullOrEmpty(parameter))
+            {
+                string getProductDetails = "getProductDetails";
+                Dictionary<string, object> map = new Dictionary<string, object>();
+                map.Add("@pProductId", parameter);
+                DataTable dt = DataProvider.getInstance.ExecuteQuery(getProductDetails, map);
+                RepeaterProductDetails.DataSource = dt;
+                RepeaterProductDetails.DataBind();
+            }
+            else
+                Response.Redirect("Product.aspx");
         }
     }
 }
