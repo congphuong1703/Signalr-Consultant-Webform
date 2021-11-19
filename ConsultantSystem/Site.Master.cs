@@ -14,20 +14,28 @@ namespace ConsultantSystem
             UserModel user = (UserModel)Session["user"];
             if (user == null)
             {
-                signOutBtn.Visible = true;
+                signInBtn.Visible = true;
+                logoutBtn.Visible = false;
             }
             else
             {
-                signOutBtn.Visible = false;
+                logoutBtn.Visible = true;
+                signInBtn.Visible = false;
+                if (user.Role == "admin")
+                {
+                    postBtn.Visible = true;
+                }
+                else
+                {
+                    postBtn.Visible = false;
+                }
             }
-            if (user.Role == "admin")
-            {
-                postBtn.Visible = true;
-            }
-            else
-            {
-                postBtn.Visible = false;
-            }
+
+        }
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Session.Remove("user");
+            Response.Redirect("SignIn.aspx");
         }
     }
 }

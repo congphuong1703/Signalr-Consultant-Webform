@@ -9,7 +9,7 @@
 
 .chat-app .chat {
     margin-left: 280px;
-    border-left: 1px solid #eaeaea
+    border-left: 1px solid #eaeaea;
 }
 
 .people-list {
@@ -76,7 +76,11 @@
 
 .chat .chat-history {
     padding: 20px;
-    border-bottom: 2px solid #fff
+    height: 500px;
+    border-bottom: 2px solid #fff;
+    max-height: 1000px;
+    overflow-y: auto;
+    overflow-x:hidden;
 }
 
     .chat .chat-history ul {
@@ -93,7 +97,7 @@
             }
 
     .chat .chat-history .message-data {
-        margin-bottom: 15px
+        margin-bottom: 5px
     }
 
         .chat .chat-history .message-data img {
@@ -108,7 +112,7 @@
 
     .chat .chat-history .message {
         color: #444;
-        padding: 18px 20px;
+        padding: 5px 15px;
         line-height: 26px;
         font-size: 16px;
         border-radius: 7px;
@@ -116,19 +120,7 @@
         position: relative
     }
 
-        .chat .chat-history .message:after {
-            bottom: 100%;
-            left: 7%;
-            border: solid transparent;
-            content: " ";
-            height: 0;
-            width: 0;
-            position: absolute;
-            pointer-events: none;
-            border-bottom-color: #fff;
-            border-width: 10px;
-            margin-left: -10px
-        }
+
 
     .chat .chat-history .my-message {
         background: #efefef
@@ -246,6 +238,42 @@
         overflow-x: auto
     }
 }
-a{
-    text-decoration:none;
+
+a {
+    text-decoration: none;
 }
+
+.joinGroup {
+    border-bottom: 1px solid #bbbbbb;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.other-message {
+}
+
+.tooltipp {
+    position: relative;
+    display: inline-block;
+}
+
+    /* Tooltip text */
+    .tooltipp .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        opacity:0.6
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltipp:hover .tooltiptext {
+        visibility: visible;
+    }

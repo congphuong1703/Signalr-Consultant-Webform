@@ -24,6 +24,15 @@ namespace ConsultantSystem
         protected global::System.Web.UI.WebControls.TextBox name;
 
         /// <summary>
+        /// CustomValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+
+        /// <summary>
         /// price control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace ConsultantSystem
         protected global::System.Web.UI.WebControls.TextBox address;
 
         /// <summary>
+        /// CustomValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator3;
+
+        /// <summary>
         /// contact control.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,15 @@ namespace ConsultantSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox contact;
+
+        /// <summary>
+        /// CustomValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator4;
 
         /// <summary>
         /// description control.
@@ -60,6 +87,15 @@ namespace ConsultantSystem
         protected global::System.Web.UI.HtmlControls.HtmlTextArea description;
 
         /// <summary>
+        /// CustomValidator5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator5;
+
+        /// <summary>
         /// images control.
         /// </summary>
         /// <remarks>
@@ -67,6 +103,15 @@ namespace ConsultantSystem
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload images;
+
+        /// <summary>
+        /// CustomValidator6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator6;
 
         /// <summary>
         /// postBtn control.

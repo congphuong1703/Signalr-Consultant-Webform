@@ -18,11 +18,13 @@
                         <ul class="list-unstyled chat-list mt-2 mb-0">
                             <asp:Repeater ID="RepeaterUsersMessage" runat="server">
                                 <ItemTemplate>
-                                    <li class="clearfix joinGroup">
-                                        <div class="about">
-                                            <div class="name"><a href="Chat?username=<%#Eval("username") %>"><%#Eval("username") %></a></div>
-                                        </div>
-                                    </li>
+                                    <a href="Chat?username=<%#Eval("username") %>&id=<%#Eval("id") %>">
+                                        <li class="clearfix joinGroup">
+                                            <div class="about">
+                                                <div class="name"><%#Eval("username") %></div>
+                                            </div>
+                                        </li>
+                                    </a>
                                 </ItemTemplate>
                             </asp:Repeater>
                         </ul>
@@ -31,21 +33,31 @@
                         <div class="chat-header clearfix">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <a href="javascript:void(0);" data-toggle="modal" data-target="#view_info">
+                                    <p id="usernamea" data-toggle="modal" data-target="#view_info">
                                         <asp:Label runat="server" ID="username"></asp:Label>
-                                    </a>
+                                    </p>
+                                </div>
+                                <div class="col-lg-6" style="float: right; display: flex; justify-content: end;">
+                                    <button id="startBtn" type="button" class="btn btn-primary">Bắt đầu</button>
                                 </div>
                             </div>
                         </div>
+                        <asp:Label ID="groupp" hidden="hidden" class="groupMessage" runat="server" />
+                        <asp:Label ID="usernameMessage" hidden="hidden" class="usernameMessage" runat="server" />
+                        <asp:Label ID="usernameReceive" hidden="hidden" class="usernameReceive" runat="server" />
+                        <asp:Label ID="delivery" hidden="hidden" class="delivery" runat="server" />
                         <div class="chat-history">
                             <ul class="m-b-0" id="discussion">
                                 <asp:Repeater ID="RepeaterMessageHistory" runat="server">
                                     <ItemTemplate>
                                         <li class="clearfix">
                                             <div class="message-data text-right">
-                                                <span class="message-data-time"><%#Eval("created_at") %></span>
+                                                <span class="message-data-time"><%#Eval("delivery") %></span>
                                             </div>
-                                            <div class="message other-message float-right"><%#Eval("content")%></div>
+                                            <div class="message other-message float-right tooltipp">
+                                                <%#Eval("content")%>
+                                                <span class="tooltiptext"><%#Eval("created_at") %></span>
+                                            </div>
                                         </li>
                                     </ItemTemplate>
                                 </asp:Repeater>
@@ -53,14 +65,14 @@
                         </div>
                         <div class="chat-message clearfix">
                             <div class="input-group mb-0">
-                                <div class="input-group-prepend">
+                                <div id="groupBtn" hidden="hidden" class="input-group-prepend">
                                     <span class="input-group-text">
                                         <a class="btn" id="sendMessageBtn">
                                             <i class="fas fa-paper-plane"></i>
                                         </a>
                                     </span>
                                 </div>
-                                <input type="text" id="message" class="form-control" placeholder="Nhập tin nhắn...">
+                                <input type="text" id="message" hidden="hidden" class="form-control" placeholder="Nhập tin nhắn..." />
                             </div>
                         </div>
                     </div>

@@ -33,6 +33,42 @@ namespace ConsultantSystem
         protected global::System.Web.UI.WebControls.Label username;
 
         /// <summary>
+        /// groupp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label groupp;
+
+        /// <summary>
+        /// usernameMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label usernameMessage;
+
+        /// <summary>
+        /// usernameReceive control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label usernameReceive;
+
+        /// <summary>
+        /// delivery control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label delivery;
+
+        /// <summary>
         /// RepeaterMessageHistory control.
         /// </summary>
         /// <remarks>

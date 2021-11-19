@@ -29,7 +29,7 @@ namespace ConsultantSystem
             {
                 var id = dt.Rows[0][0];
                 var username = dt.Rows[0][1];
-                var role = dt.Rows[0][2];
+                var role = dt.Rows[0][3];
                 var createdAt = dt.Rows[0][4];
 
                 UserModel user = new UserModel();
@@ -39,13 +39,12 @@ namespace ConsultantSystem
                 user.Role = role.ToString();
                 user.CreatedAt = DateTime.Parse(createdAt.ToString());
 
-
                 Session["user"] = user;
                 Response.Redirect("About.aspx");
             }
             else
             {
-                Response.Write("<script language='javascript'>alert('Đăng nhập thất bại')</script>");
+                Response.Write("<script language='javascript'>alert('Tài khoản hoặc mật khẩu sai')</script>");
             }
         }
     }

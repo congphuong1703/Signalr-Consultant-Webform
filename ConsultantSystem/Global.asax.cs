@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Optimization;
 using System.Web.Routing;
 using System.Web.Security;
@@ -21,6 +22,11 @@ namespace ConsultantSystem
             //Application["soNguoiTruyCap"] = 0;
             //Application["tongSoTruyCap"] = 0;
             //Application["lst_soNguoiTruyCapBlog"] = new Hashtable();
+            RouteTable.Routes.MapHttpRoute(
+            name: "DefaultApi",
+            routeTemplate: "api/{controller}/{id}",
+            defaults: new { id = System.Web.Http.RouteParameter.Optional }
+            );
         }
         protected void Session_Start(object sender, EventArgs e)
         {

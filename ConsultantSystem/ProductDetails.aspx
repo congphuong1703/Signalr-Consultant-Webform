@@ -22,7 +22,7 @@
                                     <div class="row">
                                         <figure class="view overlay rounded z-depth-1 main-img">
                                             <img src="<%#Eval("images") %>"
-                                                class="img-fluid z-depth-1 rounded">
+                                                class="img-fluid z-depth-1 rounded" style="">
                                         </figure>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@
                             </table>
                         </div>
                         <hr>
-                        <asp:Button runat="server" type="button" Text="Liên hệ" ID="chatBtn" class="btn btn-primary btn-md mr-1 mb-2" />
+                        <a href="Chat.aspx" ID="chatBtn" class="btn btn-primary btn-md mr-1 mb-2" >Liên hệ</a>
                     </div>
                     <div class="col-md-2"></div>
                 </div>

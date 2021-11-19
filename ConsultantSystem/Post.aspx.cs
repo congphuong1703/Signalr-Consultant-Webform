@@ -55,18 +55,32 @@ namespace ConsultantSystem
                     MySqlDataReader dr = DataProvider.getInstance.ExecuteQueryReader(postProduct, map);
                     if (dr.RecordsAffected > 0)
                     {
+                        Response.Write("<script language='javascript'>alert('Thêm sản phẩm thành công')</script>");
                         Response.Redirect("Product.aspx");
-                        //thong bao
                     }
                     else
                     {
-                        //thong bao
+                        Response.Write("<script language='javascript'>alert('Thêm sản phẩm thất bại')</script>");
                     }
                 }
             }
             else
             {
                 Response.Redirect("SignIn.aspx");
+            }
+        }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            int length = args.Value.Length;
+            if (length > 0)
+            {
+
+                args.IsValid = true;
+            }
+            else
+            {
+                args.IsValid = false;
             }
         }
     }

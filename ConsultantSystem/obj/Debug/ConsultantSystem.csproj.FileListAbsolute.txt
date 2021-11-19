@@ -176,3 +176,9 @@ C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\K4os.Compressi
 C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\K4os.Compression.LZ4.Streams.xml
 C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\K4os.Hash.xxHash.xml
 C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\MySql.Data.xml
+C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\System.Web.Http.dll
+C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\System.Web.Http.xml
+C:\Users\Admin\source\repos\ConsultantSystem\ConsultantSystem\bin\System.Web.Http.WebHost.xml

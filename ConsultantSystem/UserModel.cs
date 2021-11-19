@@ -20,9 +20,17 @@ namespace ConsultantSystem
             Role = role;
             CreatedAt = createdAt;
         }
+        public ICollection<Connection> Connections { get; set; }
         public int ID { get; set; }
         public string Username { get; set; }
         public string Role { get; set; }
         public DateTime CreatedAt { get; set; }
+    }
+
+    public class Connection
+    {
+        public string ConnectionID { get; set; }
+        public string UserAgent { get; set; }
+        public bool Connected { get; set; }
     }
 }

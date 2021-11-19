@@ -16,33 +16,56 @@ namespace ConsultantSystem
             if (user == null)
                 Response.Redirect("SignIn.aspx");
             string parameter = Request.QueryString["username"];
+            string id = Request.QueryString["id"];
+            string seeMore = Request.QueryString["seeMore"];
 
             loadUserChat();
-            loadMessageHistory(parameter);
+            loadMessageHistory(parameter, id, seeMore);
         }
 
-        protected void loadMessageHistory(string param)
+        protected void loadMessageHistory(string param, string id, string seeMore)
         {
             Dictionary<string, object> map = new Dictionary<string, object> { };
             string getAllMessageHistory = "getAllMessageHistory";
             UserModel user = (UserModel)Session["user"];
             if (user == null)
                 Response.Redirect("SignIn.aspx");
-            if (String.IsNullOrEmpty(param) && user.Role != "admin")
+            if (!String.IsNullOrEmpty(param) && user.Role != "admin")
             {
                 username.Text = "admin";
+                groupp.Text = user.Username;
                 map.Add("@pDelivery", user.ID);
                 map.Add("@pReceive", "admin");
             }
             else if (!String.IsNullOrEmpty(param))
             {
                 username.Text = param;
+                groupp.Text = param;
                 map.Add("@pDelivery", user.ID);
                 map.Add("@pReceive", param);
             }
+            else
+            {
+                map.Add("@pDelivery", user.ID);
+                map.Add("@pReceive", "");
+            }
+            if (String.IsNullOrEmpty(seeMore))
+            {
+                map.Add("@limitt", 0);
+
+            }
+            else
+            {
+                map.Add("@limitt", 0);
+
+            }
+
+            usernameMessage.Text = user.ID.ToString();
+            usernameReceive.Text = id;
+            delivery.Text = user.Username;
 
             DataTable dt = DataProvider.getInstance.ExecuteQuery(getAllMessageHistory, map);
-            RepeaterUsersMessage.DataSource = dt;
+            RepeaterMessageHistory.DataSource = dt;
             RepeaterMessageHistory.DataBind();
 
         }
